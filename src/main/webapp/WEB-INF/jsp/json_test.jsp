@@ -20,10 +20,16 @@ body {
 <body>
 	<div class="container">
 		<button id="ajax_load" class="btn btn-default">Ajax load()方法</button>
-		<button id="getJSON" class="btn btn-default">Ajax
-			getJSON()方法</button>
+		<button id="getJSON" class="btn btn-default">Ajax getJSON()方法</button>
+		<button id="getScript" class="btn btn-default">Ajax
+			getScript()方法</button>
+		<button id="get" class="btn btn-default">Ajax
+			get()方法</button>
+		<button id="post" class="btn btn-default">Ajax
+			post()方法</button>
 	</div>
 	<div id="load_html" class="container"></div>
 	<div id="json_json" class="container"></div>
+	<ul></ul>
 </body>
 </html>

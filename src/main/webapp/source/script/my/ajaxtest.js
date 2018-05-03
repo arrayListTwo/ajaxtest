@@ -18,9 +18,35 @@ $(function() {
 			$this.attr("disabled", true);
 			console.log(JSON.stringify(data));
 			$.each(data, function(index, sport) {
-				console.log(sport['name']);
+				console.log(sport.name);
 				$("#json_json").append("<li>" + sport['name'] + "</li>");
 			});
+		});
+	});
+	$("#getScript").on('click', function() {
+		var $this = $(this);
+		$.getScript("/springmvctest/static_resource/script.js", function(data) {
+			console.log(data);
+			$this.attr("disabled", true);
+		});
+	});
+	$("#get").on('click', function() {
+		var $this = $(this);
+		$.get("/springmvctest/static_resource/new_json.json", function(data){
+			$this.attr("disabled", true);
+			$.each(data, function(index, sport) {
+				console.log(index + " : " + sport["name"]);
+				$("ul").append("<li>" + sport["name"] + "</li>");
+			});
+		});
+	});
+	$("#post").on('click', function() {
+		var $this = $(this);
+		$.post("dopost.htm", {num: "3中文"}, function(data){
+			$this.attr("disabled", true);
+			console.log(data);
+			console.log(JSON.parse(data).nature);
+			$("ul").append("<li>" + JSON.parse(data).nature + "</li>");
 		});
 	});
 });
