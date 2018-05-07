@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>新人培训</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<!-- <link rel="stylesheet" href="${s.base}/source/style/lib/bootstrap/css/bootstrap.min.css"> -->
+<link
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding-top: 60px;
+	background-color: #F2F2F2;
+}
+
+.wx-title-color {
+	background-color: #373A41
+}
+
+div#course_list>div {
+	padding: 15px 10px;
+	border-radius: 4px;
+	-webkit-box-shadow: #ddd 0 0 4px;
+	-moz-box-shadow: #ddd 0 0 4px;
+	box-shadow: #ddd 0 0 4px;
+	margin-bottom: 15px;
+}
+
+.relative {
+	position: relative;
+}
+
+/*改变导航条active颜色*/
+.nav-tabs>li.active>a.nav-title {
+	color: #555;
+	cursor: default;
+	background-color: #F2F2F2;
+	border: 1px solid #F2F2F2;
+	border-bottom-color: transparent
+}
+
+div#course_list>div>:first-child {
+	font-size: 1.1em;
+	color: #555;
+	margin-bottom: 10px;
+}
+
+.image-border {
+	border-radius: 4px;
+}
+
+.image-forecolor {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.4);
+	width: 120px;
+	height: 70px;
+	left: 0;
+	bottom: 0;
+}
+
+.course-progress {
+	color: #ffffff;
+	bottom: 5px;
+	left: 5px;
+	position: absolute;
+	font-size: 0.8em;
+}
+
+.append-layout {
+	display: inline;
+}
+
+.exam-layout {
+	margin-left: 10px;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.exam-step {
+	position: absolute;
+	right: 5px;
+	top: 24px;
+	color: #337AB7;
+}
+
+/*此处位置应该是居中，js计算top*/
+.course-interface {
+	position: absolute;
+	top: 60px;
+	left: 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 70px;
+}
+
+.course-phy {
+	color: #337AB7;
+}
+
+ul, li {
+	list-style: none;
+}
+
+.control-bottom {
+	height: 66px;
+	padding: 8px 20px;
+	border-top: 1px solid #ddd
+}
+
+.col-dispadding {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.thum-title {
+	font-size: 0.9em;
+	color: #fff;
+}
+
+.control-content {
+	border-radius: 50%;
+	border: 1px solid #656567;
+	padding: 5px;
+	color: #fff;
+}
+
+.control-content-disable {
+	color: #656567
+}
+
+.control-content-disborder {
+	border: 1px solid #373A41;
+}
+
+.section-list {
+	height: 300px;
+	padding-top: 15px;
+	border-radius: 20px;
+	display: none;
+	color: #fff;
+}
+
+.section-list-title {
+	border-bottom: 1px solid #656567;
+	margin-left: -15px;
+	margin-right: -15px;
+	margin-bottom: 0;
+	padding-bottom: 10px;
+}
+
+.section-finished {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #656567
+}
+
+.section-studying {
+	color: #337ab7;
+}
+
+.section-nostudy {
+	color: #656567;
+}
+
+li.section-finished>:first-child {
+	float: right;
+}
+</style>
+</head>
+<body>
+	<div id="course-tab" class="container">
+		<ul class="nav nav-tabs navbar-fixed-top wx-title-color">
+			<li class="active col-xs-6 text-center"><a class="nav-title"
+				href="#course_list"><span class="glyphicon glyphicon-list-alt"></span>
+					课程列表</a></li>
+			<li class="col-xs-6 text-center"><a class="nav-title"
+				href="#course_study"><span class="glyphicon glyphicon-education"></span>
+					课程学习</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="course_list" class="tab-pane fade in active">
+				<div>
+					<div>
+						<strong>投、被保人及受益人要求</strong>
+					</div>
+					<div class="relative">
+						<img
+							src="http://img2.imgtn.bdimg.com/it/u=2662373377,2703693233&fm=27&gp=0.jpg"
+							width="120px" height="70px" class="image-border">
+						<div class="image-forecolor image-border"></div>
+						<span class="course-progress">学习进度 4/5</span>
+						<div class="text-center append-layout">
+							<div class="append-layout exam-layout">
+								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
+									<span class="glyphicon glyphicon-hand-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<strong>收入与保额的关系</strong>
+					</div>
+					<div class="relative">
+						<img
+							src="https://cdn.pixabay.com/photo/2012/12/24/08/40/dog-72333__340.jpg"
+							width="120px" height="70px" class="image-border">
+						<div class="image-forecolor image-border"></div>
+						<span class="course-progress">学习进度 5/5</span>
+						<div class="text-center append-layout">
+							<div class="append-layout exam-layout">
+								<span>考试: </span> <span>98分</span> <a class="exam-step">复习一下
+									<span class="glyphicon glyphicon-hand-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<strong>特殊人群的投保保额限制</strong>
+					</div>
+					<div class="relative">
+						<img
+							src="http://img2.imgtn.bdimg.com/it/u=1609548627,1009435979&fm=27&gp=0.jpg"
+							width="120px" height="70px" class="image-border">
+						<div class="image-forecolor image-border"></div>
+						<span class="course-progress">学习进度 4/5</span>
+						<div class="text-center append-layout">
+							<div class="append-layout exam-layout">
+								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
+									<span class="glyphicon glyphicon-hand-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<strong>不如实告知对客户造成的影响</strong>
+					</div>
+					<div class="relative">
+						<img
+							src="http://img2.imgtn.bdimg.com/it/u=3165096649,463709611&fm=27&gp=0.jpg"
+							width="120px" height="70px" class="image-border">
+						<div class="image-forecolor image-border"></div>
+						<span class="course-progress">学习进度 4/5</span>
+						<div class="text-center append-layout">
+							<div class="append-layout exam-layout">
+								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
+									<span class="glyphicon glyphicon-hand-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<strong>两种投保途径</strong>
+					</div>
+					<div class="relative">
+						<img
+							src="http://img1.imgtn.bdimg.com/it/u=1573123327,4062447646&fm=27&gp=0.jpg"
+							width="120px" height="70px" class="image-border">
+						<div class="image-forecolor image-border"></div>
+						<span class="course-progress">学习进度 4/5</span>
+						<div class="text-center append-layout">
+							<div class="append-layout exam-layout">
+								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
+									<span class="glyphicon glyphicon-hand-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="course_study" class="tab-pane fade course-interface">
+				<div>
+					<h4 class="text-center">
+						<span class="glyphicon glyphicon-blackboard course-phy"></span>
+						投、被保人及受益人要求
+					</h4>
+					<div class="img-thumbnail">
+						<img
+							src="http://img5.imgtn.bdimg.com/it/u=2605219630,2482541099&fm=27&gp=0.jpg"
+							class="img-responsive">
+						<div class="caption">
+							<h5>
+								<span class="glyphicon glyphicon-bookmark course-phy"></span>&nbsp;
+								注意要点：
+							</h5>
+							<ul style="margin: 15px;">
+								<li>有独立监护能力的成年人</li>
+								<li>不知道，不明了，不想要</li>
+								<li>有独立监护能力的成年人</li>
+								<li>不知道，不明了，不想要</li>
+								<li>有独立监护能力的成年人</li>
+								<li>不知道，不明了，不想要</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div
+					class="navbar-fixed-bottom container wx-title-color control-bottom">
+					<audio src="../source/audio/37-1.m4a"></audio>
+					<div class="row">
+						<div class="col-xs-3">
+							<img
+								src="http://img5.imgtn.bdimg.com/it/u=2605219630,2482541099&fm=27&gp=0.jpg"
+								class="img-circle" width="50px" height="50px">
+						</div>
+						<div class="col-xs-9">
+							<div class="row thum-title">
+								<strong>投、被保人及受益人要求</strong>
+							</div>
+							<div class="row">
+								<div class="col-xs-3 col-dispadding">
+									<span class="glyphicon glyphicon-step-backward control-content"></span>
+								</div>
+								<div class="col-xs-3 col-dispadding">
+									<span class="glyphicon glyphicon-play control-content"
+										id="play"></span>
+									<!--glyphicon glyphicon-pause-->
+									<!--glyphicon glyphicon-stop-->
+								</div>
+								<div class="col-xs-3 col-dispadding">
+									<span
+										class="glyphicon glyphicon-step-forward control-content control-content-disable"></span>
+								</div>
+								<div id="show-course-list" class="col-xs-3 col-dispadding">
+									<span
+										class="glyphicon glyphicon-align-justify control-content control-content-disborder"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="list-course"
+					class="navbar-fixed-bottom container wx-title-color section-list"
+					style="z-index: 19881113">
+					<p class="section-list-title">
+						&nbsp;&nbsp;&nbsp;<strong>本课程，音频列表：</strong>
+					</p>
+					<ul>
+						<li id="restudy" class="section-finished">投、被投保人及受益人要求 <span>复习一下</span>
+						</li>
+						<li class="section-finished section-studying"><span>学习中...</span>
+							<span class="glyphicon glyphicon-headphones"> </span> 收入与保额的关系</li>
+						<li class="section-finished section-nostudy">特殊人群的投保保额限制 <span>未学习</span>
+						</li>
+						<li class="section-finished section-nostudy">不如实告知对客户的影响 <span>未学习</span>
+						</li>
+						<li id="listClose">点击关闭</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script src="../script/jquery-3.3.1.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="../script/bootstrap.min.js"></script> -->
+	<script
+		src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>
+		$(function() {
+			$('#course-tab li:eq(0) a').on('click', function(e) {
+				e.preventDefault();
+				$(this).tab('show')
+			});
+			$('#course-tab li:eq(1) a').on('click', function(e) {
+				e.preventDefault();
+				$(this).tab('show')
+			});
+			$('#course-tab li:eq(0) a').on('show.bs.tab', function(e) {
+				console.log("第一个标签，显示前调用");
+				console.log($(e.target).text()); // 激活的标签页
+				console.log($(e.relatedTarget).text()) // 前一个激活的标签页
+			});
+			$('#course-tab li:eq(0) a').on('shown.bs.tab', function(e) {
+				console.log("第一个标签，显示后调用");
+				console.log($(e.target).text()); // 激活的标签页
+				console.log($(e.relatedTarget).text()) // 前一个激活的标签页
+			});
+			$('#course-tab li:eq(1) a').on('show.bs.tab', function(e) {
+				console.log("第二个标签，显示前调用");
+				console.log($(e.target).text()); // 激活的标签页
+				console.log($(e.relatedTarget).text()) // 前一个激活的标签页
+			});
+			$('#course-tab li:eq(1) a').on('shown.bs.tab', function(e) {
+				console.log("第二个标签，显示后调用");
+				console.log($(e.target).text()); // 激活的标签页
+				console.log($(e.relatedTarget).text()) // 前一个激活的标签页
+			});
+			$('#show-course-list').on('click', function() {
+				$("#list-course").show(300, function() {
+					$("body").on('click', function() {
+						$("#list-course").hide(300, function() {
+							$("body").unbind("click");
+						});
+					});
+					$("#restudy").on("click", function() {
+						alert("测试");
+						return false;
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>
