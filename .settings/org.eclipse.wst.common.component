@@ -4,6 +4,11 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+<<<<<<< HEAD
+=======
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <wb-resource deploy-path="/WEB-INF/lib" source-path="/libs"/>
+>>>>>>> b80955e662d04587a7973cf2488400a6db7c6b9b
         <property name="context-root" value="springmvctest"/>
         <property name="java-output-path" value="/springmvctest/target/classes"/>
     </wb-module>
