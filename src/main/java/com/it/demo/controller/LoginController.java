@@ -25,6 +25,11 @@ public class LoginController {
 	public ModelAndView toLoginPage() {
 		return new ModelAndView("WEB-INF/jsp/json_test.jsp");
 	}
+	
+	@RequestMapping("jsonTest")
+	public ModelAndView jsonTest() {
+		return new ModelAndView("WEB-INF/jsp/ajaxStart.jsp");
+	}
 
 	@RequestMapping("login")
 	public ModelAndView doLogin() {

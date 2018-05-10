@@ -32,7 +32,7 @@ $(function() {
 	});
 	$("#get").on('click', function() {
 		var $this = $(this);
-		$.get("/springmvctest/static_resource/new_json.json", function(data){
+		$.get("/springmvctest/static_resource/new_json.json", function(data) {
 			$this.attr("disabled", true);
 			$.each(data, function(index, sport) {
 				console.log(index + " : " + sport["name"]);
@@ -42,11 +42,50 @@ $(function() {
 	});
 	$("#post").on('click', function() {
 		var $this = $(this);
-		$.post("dopost.htm", {num: "3中文"}, function(data){
+		$.post("dopost.htm", {
+			num : "3中文"
+		}, function(data) {
 			$this.attr("disabled", true);
 			console.log(data);
 			console.log(JSON.parse(data).nature);
 			$("ul").append("<li>" + JSON.parse(data).nature + "</li>");
+		});
+	});
+	$("#form").on('click', function() {
+		var seria = $("form").serialize();
+		$("span").html(seria);
+	});
+	$("#ajax").on('click', function() {
+		var $this = $(this);
+		$.ajax({
+			url : "/springmvctest/static_resource/new_json.json",
+			dataType : "json",
+			success : function(data) {
+				$this.attr("disabled", "true");
+				$.each(data, function(index, sport) {
+					console.log(sport["name"]);
+					$("ul").append(sport["name"]);
+				});
+			}
+		});
+	});
+	$.ajaxSetup({
+		dataType : 'json',
+		success : function(data) {
+			$("ul").empty();
+			$.each(data, function(index, sport) {
+				$("ul").append(sport["name"]);
+			});
+		}
+	});
+	$("#setup_one").on('click', function() {
+		$.ajax({
+			url : "/springmvctest/static_resource/new_json.json"
+		});
+	});
+	$("#setup_two").on('click', function() {
+		$.ajax({
+			url : "/springmvctest/static_resource/test_json.json"
 		});
 	});
 });
