@@ -5,7 +5,6 @@
 <title>新人培训</title>
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<!-- <link rel="stylesheet" href="${s.base}/source/style/lib/bootstrap/css/bootstrap.min.css"> -->
 <link
 	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -107,6 +106,15 @@ ul, li {
 	list-style: none;
 }
 
+ul.remarks {
+	margin: 15px;
+}
+
+ul.remarks>li {
+	list-style: disc;
+	margin-left: 15px
+}
+
 .control-bottom {
 	height: 66px;
 	padding: 8px 20px;
@@ -171,6 +179,11 @@ ul, li {
 li.section-finished>:first-child {
 	float: right;
 }
+
+div.row span:active, div.row span:focus {
+	background-color: #fff;
+	color: #337ab7;
+}
 </style>
 </head>
 <body>
@@ -181,160 +194,42 @@ li.section-finished>:first-child {
 					课程列表</a></li>
 			<li class="col-xs-6 text-center"><a class="nav-title"
 				href="#course_study"><span class="glyphicon glyphicon-education"></span>
-					课程学习</a></li>
+					正在学习</a></li>
 		</ul>
 		<div class="tab-content">
-			<div id="course_list" class="tab-pane fade in active">
-				<div>
-					<div>
-						<strong>投、被保人及受益人要求</strong>
-					</div>
-					<div class="relative">
-						<img
-							src="http://img2.imgtn.bdimg.com/it/u=2662373377,2703693233&fm=27&gp=0.jpg"
-							width="120px" height="70px" class="image-border">
-						<div class="image-forecolor image-border"></div>
-						<span class="course-progress">学习进度 4/5</span>
-						<div class="text-center append-layout">
-							<div class="append-layout exam-layout">
-								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
-									<span class="glyphicon glyphicon-hand-right"></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div>
-						<strong>收入与保额的关系</strong>
-					</div>
-					<div class="relative">
-						<img
-							src="https://cdn.pixabay.com/photo/2012/12/24/08/40/dog-72333__340.jpg"
-							width="120px" height="70px" class="image-border">
-						<div class="image-forecolor image-border"></div>
-						<span class="course-progress">学习进度 5/5</span>
-						<div class="text-center append-layout">
-							<div class="append-layout exam-layout">
-								<span>考试: </span> <span>98分</span> <a class="exam-step">复习一下
-									<span class="glyphicon glyphicon-hand-right"></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div>
-						<strong>特殊人群的投保保额限制</strong>
-					</div>
-					<div class="relative">
-						<img
-							src="http://img2.imgtn.bdimg.com/it/u=1609548627,1009435979&fm=27&gp=0.jpg"
-							width="120px" height="70px" class="image-border">
-						<div class="image-forecolor image-border"></div>
-						<span class="course-progress">学习进度 4/5</span>
-						<div class="text-center append-layout">
-							<div class="append-layout exam-layout">
-								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
-									<span class="glyphicon glyphicon-hand-right"></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div>
-						<strong>不如实告知对客户造成的影响</strong>
-					</div>
-					<div class="relative">
-						<img
-							src="http://img2.imgtn.bdimg.com/it/u=3165096649,463709611&fm=27&gp=0.jpg"
-							width="120px" height="70px" class="image-border">
-						<div class="image-forecolor image-border"></div>
-						<span class="course-progress">学习进度 4/5</span>
-						<div class="text-center append-layout">
-							<div class="append-layout exam-layout">
-								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
-									<span class="glyphicon glyphicon-hand-right"></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div>
-						<strong>两种投保途径</strong>
-					</div>
-					<div class="relative">
-						<img
-							src="http://img1.imgtn.bdimg.com/it/u=1573123327,4062447646&fm=27&gp=0.jpg"
-							width="120px" height="70px" class="image-border">
-						<div class="image-forecolor image-border"></div>
-						<span class="course-progress">学习进度 4/5</span>
-						<div class="text-center append-layout">
-							<div class="append-layout exam-layout">
-								<span>考试: </span> <span>未考试</span> <a class="exam-step">继续学习
-									<span class="glyphicon glyphicon-hand-right"></span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<div id="course_list" class="tab-pane fade in active"></div>
 			<div id="course_study" class="tab-pane fade course-interface">
-				<div>
-					<h4 class="text-center">
-						<span class="glyphicon glyphicon-blackboard course-phy"></span>
-						投、被保人及受益人要求
-					</h4>
-					<div class="img-thumbnail">
-						<img
-							src="http://img5.imgtn.bdimg.com/it/u=2605219630,2482541099&fm=27&gp=0.jpg"
-							class="img-responsive">
-						<div class="caption">
-							<h5>
-								<span class="glyphicon glyphicon-bookmark course-phy"></span>&nbsp;
-								注意要点：
-							</h5>
-							<ul style="margin: 15px;">
-								<li>有独立监护能力的成年人</li>
-								<li>不知道，不明了，不想要</li>
-								<li>有独立监护能力的成年人</li>
-								<li>不知道，不明了，不想要</li>
-								<li>有独立监护能力的成年人</li>
-								<li>不知道，不明了，不想要</li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				<div id="course_study_content"></div>
 				<div
 					class="navbar-fixed-bottom container wx-title-color control-bottom">
-					<audio src="../source/audio/37-1.m4a"></audio>
 					<div class="row">
 						<div class="col-xs-3">
-							<img
+							<img id="control-img"
 								src="http://img5.imgtn.bdimg.com/it/u=2605219630,2482541099&fm=27&gp=0.jpg"
 								class="img-circle" width="50px" height="50px">
 						</div>
 						<div class="col-xs-9">
 							<div class="row thum-title">
-								<strong>投、被保人及受益人要求</strong>
+								<strong id="control-title"></strong>
 							</div>
 							<div class="row">
-								<div class="col-xs-3 col-dispadding">
+								<div id="before" class="col-xs-3 col-dispadding">
+									<!-- 上一节音频课程 -->
 									<span class="glyphicon glyphicon-step-backward control-content"></span>
 								</div>
-								<div class="col-xs-3 col-dispadding">
-									<span class="glyphicon glyphicon-play control-content"
-										id="play"></span>
+								<div id="play" class="col-xs-3 col-dispadding">
+									<!-- 控制音频播放和暂停操作 -->
+									<span class="glyphicon glyphicon-play control-content"></span>
 									<!--glyphicon glyphicon-pause-->
 									<!--glyphicon glyphicon-stop-->
 								</div>
-								<div class="col-xs-3 col-dispadding">
+								<div id="next" class="col-xs-3 col-dispadding">
+									<!-- 下一节音频课程 -->
 									<span
 										class="glyphicon glyphicon-step-forward control-content control-content-disable"></span>
 								</div>
 								<div id="show-course-list" class="col-xs-3 col-dispadding">
+									<!-- 课程列表 -->
 									<span
 										class="glyphicon glyphicon-align-justify control-content control-content-disborder"></span>
 								</div>
@@ -368,6 +263,7 @@ li.section-finished>:first-child {
 	<!-- <script src="../script/bootstrap.min.js"></script> -->
 	<script
 		src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
 	<script>
 		$(function() {
 			$('#course-tab li:eq(0) a').on('click', function(e) {
@@ -411,6 +307,290 @@ li.section-finished>:first-child {
 					});
 				});
 			});
+			$
+					.ajax({
+						url : "/springmvctest/curricula/sectionList.htm",
+						datatype : 'json',
+						success : function(data) {
+							var jsonObj = JSON.parse(data);
+							console.log(jsonObj.student);
+							if (!jsonObj.student) { // 判断是否已经是新人培训学员
+								layerInto();
+							}
+							$
+									.each(
+											jsonObj.sectionBean,
+											function(index, item) {
+												console.log(item.sectionID
+														+ " : "
+														+ item.sectionName
+														+ " : "
+														+ item.totalItem
+														+ " : "
+														+ item.finishedItem
+														+ " : "
+														+ item.sectionImgPath
+														+ " : "
+														+ item.examScore);
+												// 创建课程div，添加到课程列表中并隐藏
+												var divCurricula = $("<div></div>");
+												$("#course_list").append(
+														divCurricula);
+												$("#course_list").hide();
+												// 创建课程标题div，添加到课程div中并隐藏
+												var divCurriculaTitle = $("<div></div>");
+												divCurricula
+														.append(divCurriculaTitle);
+												var titleText = "<strong>"
+														+ item.sectionName
+														+ "</strong>";
+												divCurriculaTitle
+														.html(titleText);
+												//
+												var divCurriculaContent = $("<div></div>");
+												divCurricula
+														.append(divCurriculaContent);
+												divCurriculaContent
+														.addClass("relative");
+												var imgCurriculaThumb = $("<img width='120px' height='70px'>");
+												imgCurriculaThumb.addClass(
+														"image-border").attr(
+														"src",
+														item.sectionImgPath);
+												divCurriculaContent
+														.append(imgCurriculaThumb);
+												divCurriculaContent
+														.append("<div class='image-forecolor image-border'></div>");
+												var spanProgress = $("<span></span>");
+												divCurriculaContent
+														.append(spanProgress);
+												spanProgress
+														.addClass("course-progress");
+												var spanContent = "学习进度 "
+														+ item.finishedItem
+														+ "/" + item.totalItem;
+												spanProgress.text(spanContent);
+												var divCurriculaState = $("<div></div>");
+												divCurriculaContent
+														.append(divCurriculaState);
+												divCurriculaState
+														.addClass("text-center")
+														.addClass(
+																"append-layout");
+												var divCurriculaExamStep = $("<div></div>");
+												divCurriculaState
+														.append(divCurriculaExamStep);
+												divCurriculaExamStep
+														.addClass(
+																"append-layout")
+														.addClass("exam-layout");
+												var spanExam = $("<span>考试：</span>");
+												divCurriculaExamStep
+														.append(spanExam);
+												var spanExamResult;
+												console.log(item.examScore);
+												if (item.examScore === 0) {
+													spanExamResult = $("<span>未考试</span>");
+												} else {
+													spanExamResult = $("<span></span>");
+													var result = item.examScore;
+													spanExamResult.text(result);
+												}
+												divCurriculaExamStep
+														.append(spanExamResult);
+												var aStep = $("<a  href='javascript:void(0);'></a>");
+												aStep.on('click', function() {
+													continueStudy(
+															item.sectionID,
+															item.finishedItem,
+															item.totalItem)
+												});
+												divCurriculaState.append(aStep);
+												aStep.addClass("exam-step");
+												var spanStepText;
+												if (item.finishedItem === item.totalItem) {
+													spanStepText = "复习一下";
+												} else {
+													spanStepText = "继续学习";
+												}
+												aStep.text(spanStepText);
+												var spanStep = $("<span></span>");
+												aStep.append(spanStep);
+												spanStep
+														.addClass("glyphicon")
+														.addClass(
+																"glyphicon-hand-right");
+											});
+						}
+					});
+			/**
+			 * 跳转到指定的学习内容
+			 * @param sectionID 课程标识ID
+			 * @param finishedItem 本课程已完成内容
+			 * @param totalItem 本课程共计多少内容
+			 */
+			function continueStudy(sectionID, finishedItem, totalItem) {
+				var dataJson = {
+					"sectionID" : sectionID,
+					"finishedItem" : finishedItem,
+					"totalItem" : totalItem
+				};
+				$
+						.ajax({
+							url : "/springmvctest/curricula/specified.htm",
+							datatype : 'json',
+							data : JSON.stringify(dataJson),
+							contentType : 'application/json',
+							type : 'POST',
+							success : function(data) {
+								$("#course_study_content").empty();
+								$
+										.each(
+												JSON.parse(data),
+												function(index, item) {
+													console
+															.log(item.itemImgPath);
+													console
+															.log(item.itemAudioPath);
+													console.log(item.itemID);
+													console
+															.log(item.itemRemarks);
+													console.log(item.itemName);
+													$('#course-tab li:eq(1) a')
+															.tab('show');
+													// 创建audio组件并预加载音频数据
+													var $audio = $("<audio></audio>");
+													$audio.attr("src",
+															item.itemAudioPath)
+															.attr("preload",
+																	"auto");
+													$("#course_study_content")
+															.append($audio);
+													// 操作audio组件
+													controlAudio();
+													// 创建学习界面并隐藏
+													var divStudy = $("<div></div>");
+													$("#course_study_content")
+															.append(divStudy);
+													$("#course_study_content")
+															.hide();
+													var studyH = $("<h4 class='text-center'></h4>");
+													var studyTitle = "<span class='glyphicon glyphicon-blackboard course-phy'> </span>"
+															+ item.itemName;
+													studyH.append(studyTitle);
+													divStudy.append(studyH);
+													/* 课程内容图片显示空间*/
+													var divImg = $("<div class='img-thumbnail'></div>");
+													divStudy.append(divImg);
+													// 课程图片
+													var imgShow = $("<img class='img-responsive'>");
+													imgShow.attr("src",
+															item.itemImgPath);
+													divImg.append(imgShow);
+													if (item.itemRemarks === "") {
+														console
+																.log('该课程内容没有添加附加信息');
+													} else {
+														// 课程备注
+														var divCaption = $("<div class='caption'></div>");
+														divImg
+																.append(divCaption);
+														var titleRemarks = $("<h5><span class='glyphicon glyphicon-bookmark course-phy'></span>&nbsp;注意要点：</h5>")
+														divCaption
+																.append(titleRemarks);
+														var ulRemarks = $("<ul class='remarks'></ul>")
+														divCaption
+																.append(ulRemarks);
+														var remarksItem = item.itemRemarks
+																.split("#");
+														$
+																.each(
+																		remarksItem,
+																		function(
+																				index,
+																				items) {
+																			var liItem = $("<li></li>");
+																			ulRemarks
+																					.append(liItem);
+																			liItem
+																					.text(items);
+																		});
+													}
+													// 控制台处更新图片和标题
+													$("#control-img").attr(
+															"src",
+															item.itemImgPath);
+													$("#control-title").text(
+															item.itemName);
+												});
+								$("#course_study_content").show(300);
+							}
+						});
+			}
+
+			/**
+			控制audio组件
+			 */
+			function controlAudio() {
+				// audio原生对象
+				var audioDom = $("audio")[0];
+				$("#play").on(
+						'click',
+						function() {
+							console.log("点击控制按钮");
+							if (audioDom.paused) {
+								audioDom.play();
+								$("#play>span").removeClass("glyphicon-play")
+										.addClass("glyphicon-pause");
+								// 当前正在学习的课程
+								
+							} else {
+								audioDom.pause();
+								$("#play>span").removeClass("glyphicon-pause")
+										.addClass("glyphicon-play");
+							}
+						});
+				audioEnd();
+			}
+
+			/**
+			监听音频是否播放完毕
+			 */
+			function audioEnd() {
+				$("audio").on(
+						"ended",
+						function() {
+							$("#play>span").removeClass("glyphicon-pause")
+									.addClass("glyphicon-play");
+							$("#next>span").removeClass(
+									"control-content-disable");
+						});
+			}
+
+			/**
+			第一次进入课程，显示此信息
+			 */
+			function layerInto() {
+				layer
+						.open({
+							style : 'border-radius: 6px;'
+									+ '-webkit-box-shadow: #337AB7 0 0 4px;-moz-box-shadow: #337AB7 0 0 4px; box-shadow: #337AB7 0 0 4px;'
+									+ 'background-color: #F2F2F2;',
+							title : [
+									'新人培训课程',
+									'background-color: #373A41; color:#fff; margin: 0 0 10px 0; border-top-left-radius: 4px;border-top-right-radius: 4px;' ],
+							content : "<p class='text-left' style='margin-left:5px;'><span class='glyphicon glyphicon-heart-empty' style='color:#337AB7;'></span> 投、被保人及受益人要求;</p>"
+									+ "<p class='text-left' style='margin-left:5px;'><span class='glyphicon glyphicon-heart-empty' style='color:#337AB7;'></span> 不如实告知对客户造成的影响;</p>"
+									+ "<p class='text-left' style='margin-left:5px;'><span class='glyphicon glyphicon-heart-empty' style='color:#337AB7;'></span> 收入与保额的关系;</p>",
+							anim : 'up',
+							btn : [ '<p style="background-color:#373A41;border-bottom-left-radius:4px;border-bottom-right-radius:4px;margin-bottom:0;">开始课程 <label class="glyphicon glyphicon-send" style="margin-left:5px;color: #337ab7;"></label></p>' ],
+							shadeClose : false,
+							yes : function(index) {
+								layer.close(index);
+								$("#course_list").fadeIn(1000);
+							}
+						});
+			}
 		});
 	</script>
 </body>
